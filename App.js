@@ -35,7 +35,6 @@ const Section = ({children, title}): Node => {
           styles.sectionTitle,
           {
             color: isDarkMode ? Colors.white : Colors.black,
-            
           },
         ]}>
         {title}
