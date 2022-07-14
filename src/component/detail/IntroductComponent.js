@@ -8,12 +8,14 @@ const IntroductComponent = () => {
 
   const Introduces = () => {
     return (
-      <ScrollView
-        showsVerticalScrollIndicator={false}
+      <View
         style={{
           width: '100%',
           height: '100%',
-        }}></ScrollView>
+          backgroundColor: '#FFFFFF',
+        }}>
+        <Text style={styles.styleSubject}>Môn Địa lý 10</Text>
+      </View>
     );
   };
 
@@ -24,6 +26,7 @@ const IntroductComponent = () => {
         style={{
           width: '100%',
           height: '100%',
+          backgroundColor: '#FFFFFF',
         }}></ScrollView>
     );
   };
@@ -35,12 +38,20 @@ const IntroductComponent = () => {
         style={{
           width: '100%',
           height: '100%',
+          backgroundColor: '#FFFFFF',
         }}></ScrollView>
     );
   };
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarLabelStyle: {
+            fontSize: 15,
+            fontWeight: '500',
+            textTransform: 'none',
+          },
+        }}>
         <Tab.Screen name="Giới Thiệu" component={Introduces} />
         <Tab.Screen name="Nội Dung" component={Content} />
         <Tab.Screen name="Bình Luận" component={Comment} />
@@ -51,4 +62,10 @@ const IntroductComponent = () => {
 
 export default IntroductComponent;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  styleSubject: {
+    fontSize: 18,
+    fontWeight: '700',
+    margin: 10,
+  },
+});
