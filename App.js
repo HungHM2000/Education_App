@@ -24,20 +24,23 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { useDispatch, useSelector } from 'react-redux';
 import Service from './src/service/LoginService';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
+  const countRedux = useSelector((state) => state.loginState)
+
+  const dispatch = useDispatch();
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
   useEffect(() => {
-    Service('user').then(res => {
-      console.log(res)
 
-    }).catch(err => console.log(err))
+    console.log(countRedux)
+
   }, [])
   return (
     <SafeAreaView style={backgroundStyle}>
