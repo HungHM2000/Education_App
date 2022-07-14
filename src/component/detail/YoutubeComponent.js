@@ -4,23 +4,23 @@ import IntroductComponent from './IntroductComponent';
 
 export default function YoutubeComponent() {
   return (
-    <View style={{backgroundColor: '#FFFFFF'}}>
+    <View style={{backgroundColor: '#FFF', width: '100%', height: '65%'}}>
       <Image
         source={{
           uri: 'https://www.roadtovr.com/wp-content/uploads/2015/03/youtube-logo2.jpg',
         }}
         style={styles.styleImage}></Image>
-      <View style={styles.styleView1}>
-        <Text numberOfLines={2} style={styles.styleText1}>
-          Bài 3: Môn Địa Lý THPT - GVPT (Two Line Case)
-        </Text>
+      <View>
+        <View style={styles.styleView1}>
+          <Text numberOfLines={2} style={styles.styleText1}>
+            Bài 3: Môn Địa Lý THPT - GVPT (Two Line Case)
+          </Text>
+        </View>
+        <View style={styles.styleView2}>
+          <Text style={styles.styleText2}>Thời gian: </Text>
+          <Text style={styles.styleText3}>30/06/2022</Text>
+        </View>
       </View>
-      <View style={styles.styleView2}>
-        <Text style={styles.styleText2}>Thời gian: </Text>
-        <Text style={styles.styleText3}>30/06/2022</Text>
-      </View>
-
-      <IntroductComponent />
     </View>
   );
 }

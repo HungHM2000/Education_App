@@ -7,6 +7,7 @@ export default function DetailScreen() {
   return (
     <View>
       <YoutubeComponent />
+      <IntroductComponent />
     </View>
   );
 }
