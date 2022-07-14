@@ -1,5 +1,7 @@
 import { View, Text, ScrollView, StyleSheet, StatusBar, SafeAreaView, Image, Switch, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
+
 
 const ProfileScreen = () => {
 
@@ -108,7 +110,7 @@ const ProfileScreen = () => {
                         </View>
                     </View>
 
-
+                    <Icon name="rocket" size={30} color="#900" />
 
                 </View>
             </ScrollView>
