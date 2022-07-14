@@ -9,12 +9,13 @@ import {
   View,
 } from 'react-native';
 import Login from './src/screen/Login';
+import ProfileScreen from './src/screen/ProfileScreen';
 
 const App = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <Login />
+      <ProfileScreen />
     </View>
   );
 };
