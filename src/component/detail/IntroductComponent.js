@@ -6,24 +6,6 @@ import {NavigationContainer} from '@react-navigation/native';
 const IntroductComponent = () => {
   const Tab = createMaterialTopTabNavigator();
 
-  //   let squares = [];
-  //   let numberOfSquare = 7;
-
-  //   for (let index = 0; index < numberOfSquare; index++) {
-  //     squares.push(
-  //       <View key={index}>
-  //         <View
-  //           style={{
-  //             width: 130,
-  //             height: 150,
-  //             marginVertical: 0.5,
-  //             backgroundColor: '#f39c12',
-  //             opacity: 0.1,
-  //           }}></View>
-  //       </View>,
-  //     );
-  //   }
-
   const Introduces = () => {
     return (
       <ScrollView
@@ -34,6 +16,7 @@ const IntroductComponent = () => {
         }}></ScrollView>
     );
   };
+
   const Content = () => {
     return (
       <ScrollView
@@ -44,6 +27,7 @@ const IntroductComponent = () => {
         }}></ScrollView>
     );
   };
+
   const Comment = () => {
     return (
       <ScrollView
