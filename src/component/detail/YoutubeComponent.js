@@ -1,5 +1,6 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import React, {useState, useCallback, useRef} from 'react';
+import IntroductComponent from './IntroductComponent';
 
 export default function YoutubeComponent() {
   return (
@@ -18,6 +19,8 @@ export default function YoutubeComponent() {
         <Text style={styles.styleText2}>Thời gian: </Text>
         <Text style={styles.styleText3}>30/06/2022</Text>
       </View>
+
+      <IntroductComponent />
     </View>
   );
 }

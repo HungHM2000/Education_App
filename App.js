@@ -6,7 +6,7 @@ import DetailScreen from './src/screen/DetailScreen';
 export default function App() {
   return (
     <View>
-      <YoutubeComponent />
+      <DetailScreen />
     </View>
   );
 }
