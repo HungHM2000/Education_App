@@ -1,13 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-export default function App() {
+const App = () => {
   return (
     <View>
       <Text>App</Text>
-      <Text>Nguyen Khac Dai</Text>
     </View>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({});
