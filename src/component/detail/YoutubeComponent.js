@@ -4,7 +4,7 @@ import IntroductComponent from './IntroductComponent';
 
 export default function YoutubeComponent() {
   return (
-    <View>
+    <View style={{backgroundColor: '#FFFFFF'}}>
       <Image
         source={{
           uri: 'https://www.roadtovr.com/wp-content/uploads/2015/03/youtube-logo2.jpg',
