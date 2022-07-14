@@ -5,6 +5,7 @@ export default function App() {
   return (
     <View>
       <Text>App</Text>
+      <Text>Nguyen Khac Dai</Text>
     </View>
   );
 }
