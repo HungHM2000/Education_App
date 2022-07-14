@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, TextInput, Button } from 'react-native'
 import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/dist/Fontisto';
-import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 const ProfileBirthday = () => {
     
@@ -10,7 +10,10 @@ const ProfileBirthday = () => {
     const [show, setShow] = useState(false);
     const [text, setText] = useState('');
 
-  
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setShow()
+    }
 
     const showMode = (currentMode) => {
         setShow(true);
@@ -24,7 +27,7 @@ const ProfileBirthday = () => {
                 
                 <Text>Chọn ngày sinh</Text>
                 <Icon.Button name='date' size={20} color="#a5a8a6"
-                    backgroundColor="#fff" style={{ marginTop: 10 }} onPress={() => setOpen(true)}>
+                    backgroundColor="#fff" style={{ marginTop: 10 }}>
                 </Icon.Button>
                 
             </View>
