@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, StyleSheet, StatusBar, SafeAreaView, Image, Switch, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
-
+import Icon from 'react-native-vector-icons/dist/AntDesign';
+import IconButton from 'react-native-vector-icons/dist/Entypo';
 
 const ProfileScreen = () => {
 
@@ -20,10 +20,18 @@ const ProfileScreen = () => {
                         <Text style={styles.textTitle}>Tài khoản </Text>
                     </View>
                     <View style={styles.avatarView}>
-                        <Image
-                            style={styles.avatar}
-                            source={{ uri: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRRyYPpSOn_kpXBtE4wJ50MCIJ9J7bBAq8_swh03mb1kml7lGqF' }}
-                        />
+                        <View style={styles.avatarWrap}>
+                            <Image
+                                style={styles.avatar}
+                                source={{ uri: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRRyYPpSOn_kpXBtE4wJ50MCIJ9J7bBAq8_swh03mb1kml7lGqF' }}
+                            />
+
+                            <View style={styles.iconView}>
+                                <IconButton name="camera" size={25} color="#3D9C8A" style={styles.icon}/>
+                            </View>
+                        </View>
+
+
                         <Text style={styles.avatarText}>Ngo Quoc Bao</Text>
                         <Text style={{ marginTop: 5 }}>Hoc Vien</Text>
                     </View>
@@ -35,32 +43,38 @@ const ProfileScreen = () => {
                     <View style={styles.info}>
                         <View style={styles.inforrow}>
                             <Text style={styles.settingText}>Domain</Text>
-                            <Text style={{ marginLeft: '25%' }}>acb@gmail.com</Text>
+                            <Text >acb@gmail.com</Text>
+                            <Text></Text>
                         </View>
 
                         <View style={styles.inforrow}>
                             <Text style={styles.settingText}>Tên Đăng Nhập</Text>
-                            <Text style={{ marginLeft: '12%' }}>abc123</Text>
+                            <Text style={{ marginRight: '30%' }}>abc123</Text>
+                            <Text></Text>
                         </View>
 
                         <View style={styles.inforrow}>
                             <Text style={styles.settingText}>Mật Khẩu</Text>
-                            <Text style={{ marginLeft: '22%' }}>****</Text>
+                            <Text style={{ marginRight: '21%' }}>****</Text>
+                            <IconButton name="chevron-thin-right" size={15} color="#000" />
                         </View>
 
                         <View style={styles.inforrow}>
                             <Text style={styles.settingText}>Ngày sinh</Text>
-                            <Text style={{ marginLeft: '22%' }}>10/09/1990</Text>
+                            <Text style={{ marginRight: '9%' }}>10/09/1990</Text>
+                            <IconButton name="chevron-thin-right" size={15} color="#000" />
                         </View>
 
                         <View style={styles.inforrow}>
                             <Text style={styles.settingText}>Giới tính</Text>
-                            <Text style={{ marginLeft: '25%' }}>Nam</Text>
+                            <Text style={{ marginRight: '18%' }}>Nam</Text>
+                            <IconButton name="chevron-thin-right" size={15} color="#000" />
                         </View>
 
                         <View style={styles.inforrow}>
                             <Text style={styles.settingText}>Trường học</Text>
-                            <Text style={{ marginLeft: '19.5%' }}>Trường Đời</Text>
+                            <Text style={{ marginRight: '13%' }}>Trường Đời</Text>
+                            <IconButton name="chevron-thin-right" size={15} color="#000" />
                         </View>
                     </View>
 
@@ -99,18 +113,22 @@ const ProfileScreen = () => {
                     <View style={styles.changeAc}>
                         <View style={styles.changeAc1}>
                             <TouchableOpacity style={styles.button1}>
-                                <Text style={{color: 'white'}}>Học viên</Text>
+                                <Text style={{ color: 'white' }}>Học viên</Text>
                             </TouchableOpacity>
                         </View>
 
                         <View style={styles.changeAc2}>
                             <TouchableOpacity style={styles.button2}>
-                                <Text style={{color: '#1FAD95'}}>Giảng viên</Text>
+                                <Text style={{ color: '#1FAD95' }}>Giảng viên</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
 
-                    <Icon name="rocket" size={30} color="#900" />
+                    <View style={{ flexDirection: 'row' }}>
+                        <Icon name="poweroff" size={30} color="#F7980D" style={{ marginLeft: '5%' }} />
+                        <Text style={{ fontSize: 20, color: "#F7980D", marginLeft: '2%', fontWeight: 'bold' }}>Đăng xuất</Text>
+                    </View>
+
 
                 </View>
             </ScrollView>
@@ -146,6 +164,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 10,
     },
+    avatarWrap: {
+        position: 'relative',
+        padding: 5,
+    },
     avatarText: {
         fontSize: 20,
         color: '#0F0F0F',
@@ -169,6 +191,8 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderColor: '#EFEFEF',
         paddingBottom: 10,
+        paddingRight: 10,
+        justifyContent: 'space-between'
     },
     setting: {
         marginTop: '3%',
@@ -203,10 +227,26 @@ const styles = StyleSheet.create({
     },
     button2: {
         padding: 10,
-        flex:1,
+        flex: 1,
         borderTopLeftRadius: 9,
         borderBottomLeftRadius: 9,
         alignItems: 'center'
+    },
+    iconView: {
+        backgroundColor: "#FFF",
+        borderRadius: 25,
+        width: 40,
+        height: 40,
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'absolute',
+        top: 0,
+        right: 0
+    },
+    icon: {
+        backgroundColor: '#F2EFF0',
+        padding: 5,
+        borderRadius: 25,
     }
 
 })
