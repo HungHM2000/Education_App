@@ -13,6 +13,7 @@ const ListScreen = () => {
           <ScrollView horizontal={true} style={{width: '100%', height: '100%'}}>
             <View>
               <Subject />
+              <Text>ok</Text>
             </View>
             <View>
               <Subject />
