@@ -33,7 +33,6 @@ const ListScreen = () => {
             </View>
             <View>
               <Subject />
-              <Text></Text>
             </View>
           </ScrollView>
         </ScrollView>
